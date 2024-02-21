@@ -1,0 +1,5 @@
+# ninja log v5
+1039	1120	7302163779229328	CppSDL.exe	fc0e90232c763516
+4	54	7302163235382555	CMakeFiles/CppSDL.dir/src/main.cpp.obj	784f046320142bb
+6	1039	7302163778436948	CMakeFiles/CppSDL.dir/src/Engine/TinyEngine.cpp.obj	94ecf3220da56e3d
+1	270	7302191364322278	build.ninja	9b414b25d6d44458
