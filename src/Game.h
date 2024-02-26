@@ -4,15 +4,18 @@
 
 class Game {
 public:
-    Game() = default;
+    Game();
     ~Game() = default;
     void Init();
+    void Input();
     void Update();
     void UpdateGrapics();
     void End();
 
 private:
+    void Run();
 
+    bool isRunning = true;
 
 };
 
