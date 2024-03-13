@@ -12,8 +12,14 @@ include_directories(${SDL2_INCLUDE_DIR})
 find_package(SDL2_ttf REQUIRED)
 include_directories(${PROJECT_NAME} ${SDL2_TTF_INCLUDE_DIR})
 
-add_executable(${PROJECT_NAME}
-        src/main.cpp
-        src/Game.cpp)
+file(GLOB CPP_LIST
+        "src/*.cpp"
+        "src/Game/*.cpp"
+        "src/Engine/*.cpp"
+        "src/Math/*.cpp")
+
+add_executable(CppSDL
+            ${CPP_LIST})
+
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARIES})

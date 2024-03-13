@@ -1,10 +1,26 @@
-#include "Game.h"
+#include "Engine/TinyEngine.h"
+#include "Game/Game.h"
+#include "Config.h"
 
-int main(int argc, char* argv[])
+int main()
 {
-    Game game;
-    game.Init();
-    game.Update();
-    game.End();
-    return 0;
+	engInit("Hey", Config::WINDOW_WIDTH, Config::WINDOW_HEIGHT);
+
+	game = new Game();
+
+	while(engBeginFrame())
+	{
+		engSetDrawColor(COLOR_DARK_GRAY);
+		engClearScreen();
+
+		if (engKeyPressed(Key::Escape))
+		{
+			return 0;
+		}
+
+		game->update();
+		game->render();
+	}
+
+	delete game;
 }

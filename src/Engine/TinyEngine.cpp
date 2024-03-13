@@ -2,10 +2,10 @@
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <windows.h>
-#include <cmath>
 #include <cstdarg>
 #include <cstdio>
 #include <ctime>
+#include <cmath>
 
 // Rendering stuff
 static SDL_Window* window = nullptr;
@@ -38,6 +38,7 @@ static int mouse_y;
 // Time keeping stuff
 static LARGE_INTEGER clock_freq;
 static LARGE_INTEGER last_frame_time;
+static LARGE_INTEGER startup_time;
 
 void engInit(const char* title, int width, int height)
 {
@@ -47,7 +48,7 @@ void engInit(const char* title, int width, int height)
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	// Initialize randomness
-	srand(time(nullptr));
+	srand(time(NULL));
 
 	// Enable alpha blending
 	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
@@ -58,7 +59,8 @@ void engInit(const char* title, int width, int height)
 
 	// Initialize clock for delta time calculation
 	QueryPerformanceFrequency(&clock_freq);
-	QueryPerformanceCounter(&last_frame_time);
+	QueryPerformanceCounter(&startup_time);
+	last_frame_time = startup_time;
 
 	is_open = true;
 }
@@ -144,6 +146,16 @@ bool engBeginFrame()
 	SDL_Delay(1);
 
 	return true;
+}
+
+float engCurrentTime()
+{
+	return float(last_frame_time.QuadPart - startup_time.QuadPart) / clock_freq.QuadPart;
+}
+
+float engTimePassedSince(float time)
+{
+	return engCurrentTime() - time;
 }
 
 float engDeltaTime() { return delta_time; }
