@@ -1,8 +1,13 @@
 #pragma once
 #include "../Actor.h"
 
-class PickUp : public Actor
+class HealthPickUp : public Actor
 {
 public:
-	PickUp(Vector position);
+	explicit HealthPickUp(Vector position);
+};
+
+class AmmoPickUp : public Actor
+{
+public: AmmoPickUp(Vector position);
 };

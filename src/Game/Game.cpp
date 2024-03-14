@@ -26,13 +26,21 @@ Game::Game()
 		}
 	}, true);
 
-	timers.add_timer(10.f, [this]() {
+	timers.add_timer(10.f, [this]()  {
 		if (get_player() == nullptr)
 			return;
-
-		spawn_actor<PickUp>(
+		spawn_actor<HealthPickUp>(
 			get_player()->position + Vector::random_point_on_circle(200.f)
 		);
+	}, true);
+
+	timers.add_timer(15.0f, [this]()
+	{
+		if(get_player() == nullptr)
+			return;
+		spawn_actor<AmmoPickUp>(
+			get_player()->position + Vector::random_point_on_circle(200.f)
+			);
 	}, true);
 }
 

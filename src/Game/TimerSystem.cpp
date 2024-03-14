@@ -1,4 +1,6 @@
 #include "TimerSystem.h"
+
+#include <utility>
 #include "../Engine/TinyEngine.h"
 
 void Timer_System::add_timer(float duration, Callback callback, bool looping)
@@ -7,7 +9,7 @@ void Timer_System::add_timer(float duration, Callback callback, bool looping)
 	timer.looping = looping;
 	timer.start_time = engCurrentTime();
 	timer.duration = duration;
-	timer.callback = callback;
+	timer.callback = std::move(callback);
 
 	timers.push_back(timer);
 }
