@@ -1,21 +1,30 @@
-"C:\Users\Aaron.Marklund\AppData\Local\Programs\CLion Nova\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Users/Aaron.Marklund/AppData/Local/Programs/CLion Nova/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\Aaron.Marklund\CLionProjects\CppSDL -B C:\Users\Aaron.Marklund\CLionProjects\CppSDL\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 241.13688.39\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\Aaron\CLionProjects\CppSDL -B C:\Users\Aaron\CLionProjects\CppSDL\cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Users/Aaron.Marklund/AppData/Local/Programs/CLion Nova/bin/mingw/bin/gcc.exe - skipped
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 241.13688.39/bin/mingw/bin/gcc.exe - skipped
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: C:/Users/Aaron.Marklund/AppData/Local/Programs/CLion Nova/bin/mingw/bin/g++.exe - skipped
+-- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 241.13688.39/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE  
--- Found SDL2: mingw32;-mwindows;C:/Users/Aaron.Marklund/CLionProjects/CppSDL/SDLdevel/SDL2-2.30.0/x86_64-w64-mingw32/lib/libSDL2main.a;C:/Users/Aaron.Marklund/CLionProjects/CppSDL/SDLdevel/SDL2-2.30.0/x86_64-w64-mingw32/lib/libSDL2.dll.a  
--- Found SDL2_ttf: C:/Users/Aaron.Marklund/CLionProjects/CppSDL/SDLdevel/SDL2_ttf-2.22.0/x86_64-w64-mingw32/lib/libSDL2_ttf.dll.a (found version "2.22.0") 
--- Configuring done (1.7s)
+-- Found SDL2: mingw32;-mwindows;C:/Users/Aaron/CLionProjects/CppSDL/SDLdevel/SDL2-2.30.0/x86_64-w64-mingw32/lib/libSDL2main.a;C:/Users/Aaron/CLionProjects/CppSDL/SDLdevel/SDL2-2.30.0/x86_64-w64-mingw32/lib/libSDL2.dll.a  
+-- Found SDL2_ttf: C:/Users/Aaron/CLionProjects/CppSDL/SDLdevel/SDL2_ttf-2.22.0/x86_64-w64-mingw32/lib/libSDL2_ttf.dll.a (found version "2.22.0") 
+-- Configuring done (4.8s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/Users/Aaron.Marklund/CLionProjects/CppSDL/cmake-build-debug
+-- Build files have been written to: C:/Users/Aaron/CLionProjects/CppSDL/cmake-build-debug

@@ -26,6 +26,18 @@ Game::Game()
 		}
 	}, true);
 
+    timers.add_timer(4.f, [this]() {
+        if (get_player() == nullptr)
+            return;
+
+        if (Enemy::NUM_ENEMIES < 5)
+        {
+            spawn_actor<BigEnemy>(
+                    get_player()->position + Vector::random_point_on_circle(500.f)
+            );
+        }
+    }, true);
+
 	timers.add_timer(10.f, [this]()  {
 		if (get_player() == nullptr)
 			return;

@@ -1,5 +1,5 @@
 #include "Vector.h"
-#include "C:/Users/Aaron.Marklund/CLionProjects/CppSDL/src/Engine/TinyEngine.h"
+#include "../Engine/TinyEngine.h"
 #include "../Math/Math.h"
 
 
